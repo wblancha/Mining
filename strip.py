@@ -1,7 +1,7 @@
 def StripTags (PageContents):
-    startLoc = PageContents.find('<div class="entry-content">')
-    endLoc = PageContents.find("End of Project")
-    PageContents = PageContents[:endLoc]
+    startLoc = PageContents.find('<body>')
+    endLoc = PageContents.find("</body>")
+   #PageContents = PageContents[startLoc:endLoc]
    # return PageContents
 
     inside = 0
