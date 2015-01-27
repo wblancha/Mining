@@ -1,6 +1,7 @@
 import count
 import urllib2
 import strip
+import stopwords
 #following function opens the url, reads it, and calls the strip module to remove html tags, punctuation.  
 #It also calls the count module to count the frequency of of the remaining words
 def mine(content):
@@ -9,7 +10,8 @@ def mine(content):
 
     text = strip.StripTags(webContent).lower()
     final = strip.stripNonAlphaNum(text)
-    counted = count.counting(final)
+    finale = stopwords.stop(final)
+    counted = count.counting(finale)
 
 address = raw_input("Please enter a valid url to mine from\n")
 mine(address)
