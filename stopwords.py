@@ -1,13 +1,11 @@
 #Stopwords.py
-#tester = ["name", "date", "distance", "and", "or", "the"]
+tester = ["name", "date", "distance", "and", "or", "the"]
 def stop(words):
-    filtered = []
     stopwords =["and", "or", "a", "the", "then"]
-    for word in words:
-        if word not in stopwords:
-            filtered.append(word)
+    for word in stopwords:
+        if word in words:
+            words.remove(word)
         else:
             print "Not in list"
-    return filtered
-#test = stop(tester)
-#This is a test
+test = stop(tester)
+print tester
