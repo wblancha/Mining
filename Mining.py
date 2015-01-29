@@ -9,7 +9,8 @@ def mine(content):
 
     text = strip.StripTags(webContent).lower()
     final = strip.stripNonAlphaNum(text)
-    counted = count.counting(final)
+    finale = stopwords.stop(final)  
+    counted = count.counting(finale)
 
 address = raw_input("Please enter a valid url to mine from\n")
 mine(address)
