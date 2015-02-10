@@ -15,7 +15,7 @@ def counting (word):
     sorted_x = sorted(word_count.items(), key=operator.itemgetter(1))
     for i in sorted_x:
         print i
-    file = open("sorted.txt", "w")
+    file = open(raw_input("Please choose a file name."), "w")
     file.write(str(sorted_x))
     file.close
 #Below is testing code

@@ -1,8 +1,8 @@
 def StripTags (PageContents):
-    startLoc = PageContents.find('<body>')
-    endLoc = PageContents.find("</body>")
-   #PageContents = PageContents[startLoc:endLoc]
-   # return PageContents
+    startLoc = PageContents.find('<span class="displaytext">')
+    endLoc = PageContents.find("</i></span>")
+    #PageContents = PageContents[startLoc:endLoc]
+    #return PageContents
 
     inside = 0
     text = ""

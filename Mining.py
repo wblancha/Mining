@@ -13,5 +13,5 @@ def mine(content):
     finale = stopwords.stop(final)  
     counted = count.counting(finale)
 
-address = raw_input("Please enter a valid url to mine from\n")
-mine(address)
+#address = raw_input("Please enter a valid url to mine from\n")
+#mine(address)
