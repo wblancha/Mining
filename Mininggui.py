@@ -5,17 +5,27 @@ from Tkinter import *
 import Mining
 
 def Mine():
-	Mining.mine(httpEntry.get())
+	Mining.mine(httpEntry.get(),countedfileentry.get())
+	mainwindow.destroy()
 
+	
 mainwindow = Tk()
 
 httpLabel = Label(mainwindow, text = "Address to Mine")
-httpLabel.pack(side =LEFT)
+httpLabel.pack()
 
 httpEntry = Entry(mainwindow, bd=5)
-httpEntry.pack(side =RIGHT	)
+httpEntry.pack()
+
+countedfilelabel = Label(mainwindow, text = "Name of file")
+countedfilelabel.pack()
+
+countedfileentry = Entry(mainwindow, bd=5)
+countedfileentry.pack()
 
 httpButton = Button(mainwindow, text = "Mine!", command = Mine)
 httpButton.pack()
+
+
 
 mainwindow.mainloop()

@@ -1,5 +1,5 @@
 import operator
-def counting (word):
+def counting (word,countedname):
     word_count = {}
     for item in word:
         count = 1
@@ -15,7 +15,7 @@ def counting (word):
     sorted_x = sorted(word_count.items(), key=operator.itemgetter(1))
     for i in sorted_x:
         print i
-    file = open(raw_input("Please choose a file name."), "w")
+    file = open(countedname, "w")
     file.write(str(sorted_x))
     file.close
 #Below is testing code
